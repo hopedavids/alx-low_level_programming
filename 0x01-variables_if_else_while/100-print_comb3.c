@@ -1,46 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
 /**
  * main - Entry point
  *
- * Description: print out different combinations of two digits
- * 1 two digits each separted by ,
- * 2 print only the smaller combination of digit in ascending order
- * 3 
- * Return: Always 0 for Success
+ * Return: Always 0 (Success)
  */
 
-int main(void) {
-	
-	int comb3;
-	int d;
+int main(void)
+{
+	int d, p;
 
-	for (comb3 = '0'; comb3 < '9'; comb3++) { /*the first count 0 - 9 */
-	
-		for (d = comb3+1; d <= '9'; d++) /* the second count adding +1 to each integer */
+	for (d = '0'; d < '9'; d++)
+	{
+		for (p = d + 1; p <= '9'; p++)
 		{
-			if (d != comb3) 
+			if (p != d)
 			{
-				putchar(comb3); 
 				putchar(d);
+				putchar(p);
 
-				if (d == '8' && comb3 == '9')
-				
+				if (d == '8' && p == '9')
 					continue;
-				
 
 				putchar(',');
 				putchar(' ');
-
-			
-
 			}
+		}
+	}
+	putchar('\n');
 
-		}	
-
-	
-	 }
-	 putchar('\n');
-
-	 return (0);
+	return (0);
 }
