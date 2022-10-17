@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Description - another alphabt soup 
+ * Description - another alphabt soup
  *
  * Return: Always 0 for Success
  */
@@ -18,11 +18,12 @@ int main(void)
 	e = 'e';
 	q = 'q';
 
-	for(ch = 'a'; ch <= 'z'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		if(ch != e && ch != q){
+		if (ch != e && ch != q)
+		{
 			putchar(ch);
-		}	
+		}
 	}
 	putchar('\n');
 	return (0);
