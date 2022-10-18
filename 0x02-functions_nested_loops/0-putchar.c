@@ -10,9 +10,13 @@
 
 int main(void)
 {
-	char i = '2';
+	char words[] = "_putchar";
+	int j;
 
-	_putchar(i);
+	for (j = 0; j <= 7; j++)
+	{
+		_putchar(words[j]);
+	}
 	_putchar('\n');
 
 	return (0);
