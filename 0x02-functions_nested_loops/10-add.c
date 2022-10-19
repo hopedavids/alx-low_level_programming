@@ -2,7 +2,8 @@
 
 /**
 * add - check the code
-* @a, @b
+* @a: the integers as argc and argv
+* @b: the integers as argc
 * Return: Always 0.
 */
 
