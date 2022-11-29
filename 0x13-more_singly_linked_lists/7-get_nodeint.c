@@ -1,31 +1,24 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * get_nodeint_at_index - A function that gets a node of list at specific index
+ * @head: A pointer to listint_t structure
+ * @index: The index of the node
+ * Return: A pointer to node at specified index, or NULL if not exist
  */
-int main(void)
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-    listint_t *head;
-    listint_t *node;
+	unsigned int i = 0;
 
-    head = NULL;
-    add_nodeint_end(&head, 0);
-    add_nodeint_end(&head, 1);
-    add_nodeint_end(&head, 2);
-    add_nodeint_end(&head, 3);
-    add_nodeint_end(&head, 4);
-    add_nodeint_end(&head, 98);
-    add_nodeint_end(&head, 402);
-    add_nodeint_end(&head, 1024);
-    print_listint(head);
-    node = get_nodeint_at_index(head, 5);
-    printf("%d\n", node->n);
-    print_listint(head);
-    free_listint2(&head);
-    return (0);
+	if (head == NULL)
+		return (NULL);
+
+	while (head)
+	{
+		if (i == index)
+			return (head);
+		head = head->next;
+		i++;
+	}
+	return (NULL);
 }
